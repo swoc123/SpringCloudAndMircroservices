@@ -1,0 +1,5 @@
+com/jay/user/web/UserController.class
+com/jay/user/mapper/UserMapper.class
+com/jay/user/UserApplication.class
+com/jay/user/service/UserService.class
+com/jay/user/pojo/User.class

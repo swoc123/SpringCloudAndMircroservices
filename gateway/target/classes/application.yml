@@ -1,0 +1,23 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        namespace: b5c831ac-b585-48c0-a370-6125839d85f8
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://userservice
+          filters:
+            - AddRequestHeader=queshi, yeshihe nchuana!
+          predicates:
+            - Path=/user/**
+        - id: order-service
+          uri: lb://orderservice
+          predicates:
+            - Path=/order/**
+            - Before=2031-04-13T15:14:47.433+08:00[Asia/Shanghai]
